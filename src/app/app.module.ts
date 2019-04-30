@@ -30,7 +30,7 @@ import { AuthService } from './shared/services/auth.service';
     AngularFireModule.initializeApp(environment.firebaseConfig, 'No Adblock Please'),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AppRoutingModule 
+    AppRoutingModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
