@@ -14,12 +14,12 @@
           (click)="authService.SignIn(userName.value, userPassword.value)">
       </div>
       <div>
-        <span class="or"><span class="orInner">Or</span></span>
+        <span><span>Or</span></span>
       </div>
       <!-- Calling GoogleAuth Api from AuthService -->
       <div>
         <button type="button" (click)="authService.GoogleAuth()">
-          <i class="fab fa-google-plus-g"></i>
+          <i></i>
           Log in with Google
         </button>
       </div>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div>
-      <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+      <span>Don't have an account?<span routerLink="/register-user"> Sign Up</span></span>
     </div>
   </div>
 </div>
