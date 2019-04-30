@@ -13,6 +13,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AppRoutingModule } from './shared/routing/app-routing.module';
+import { AuthService } from './shared/services/auth.service';
 
 
 @NgModule({
@@ -29,9 +30,9 @@ import { AppRoutingModule } from './shared/routing/app-routing.module';
     AngularFireModule.initializeApp(environment.firebaseConfig, 'No Adblock Please'),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    AppRoutingModule    
+    AppRoutingModule 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
