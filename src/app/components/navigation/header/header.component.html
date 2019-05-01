@@ -9,7 +9,7 @@
       <div fxShow="true" fxHide.lt-md="true" fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
       <h1>Üdvözöllek, {{(user.displayName) ? user.displayName : 'User'}}</h1>
       <span class="fill-remaining-space">No Adblock Please</span>
-      <button mat-button *ngIf="authService.afAuth.authState" (click)="authService.SignOut()">Kijelentkezés</button>
+      <button mat-button *ngIf="authService.afAuth.authState" (click)="authService.SignOut()"><mat-icon>exit_to_app</mat-icon>Kijelentkezés</button>
 
   </div>
 </mat-toolbar>
