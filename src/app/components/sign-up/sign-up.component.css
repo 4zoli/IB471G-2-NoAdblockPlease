@@ -1,0 +1,37 @@
+.signup-card {
+  max-width: 400px;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.signup-header-image {
+  background-image: url(../../../assets/registerIcon.jpg);
+  background-size: cover;
+}
+
+.signup-form {
+  /*background-color: red;*/
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin:auto;
+}
+
+.signup-full-width {
+  /*background-color: black;*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registrateButton {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 1%;
+}
+
+.alreadyRegistered  {
+  margin-top: 5%;
+}

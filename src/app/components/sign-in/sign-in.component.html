@@ -1,48 +1,15 @@
-<!--<div>-->
-  <!--<div>-->
-    <!--<div>-->
-      <!--<h3>Sign In</h3>-->
-      <!--<div>-->
-        <!--<input type="text" placeholder="Username" #userName required>-->
-      <!--</div>-->
-      <!--<div>-->
-        <!--<input type="password" placeholder="Password" #userPassword required>-->
-      <!--</div>-->
-      <!--&lt;!&ndash; Calling SignIn Api from AuthService &ndash;&gt;-->
-      <!--<div>-->
-        <!--<input type="button" value="Log in"-->
-          <!--(click)="authService.SignIn(userName.value, userPassword.value)">-->
-      <!--</div>-->
-      <!--<div>-->
-        <!--<span><span>Or</span></span>-->
-      <!--</div>-->
-      <!--&lt;!&ndash; Calling GoogleAuth Api from AuthService &ndash;&gt;-->
-      <!--<div>-->
-        <!--<button type="button" (click)="authService.GoogleAuth()">-->
-          <!--<i></i>-->
-          <!--Log in with Google-->
-        <!--</button>-->
-      <!--</div>-->
-      <!--<div>-->
-        <!--<span routerLink="/forgot-password">Forgot Password?</span>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div>-->
-      <!--<span>Don't have an account?<span routerLink="/register-user"> Sign Up</span></span>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-
-<mat-card class="example-card">
+<mat-card class="signin-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
+    <div mat-card-avatar class="signin-header-image"></div>
     <mat-card-title>NO ADBLOCK PLEASE</mat-card-title>
     <mat-card-subtitle>A játék használatához be kell jelentkezned.</mat-card-subtitle>
   </mat-card-header>
   <div id="registerButtonContainer">
     <button mat-raised-button type="button" routerLink="/register-user">Regisztráció </button>
   </div>
-  <img mat-card-image src="../../../assets/welcomeLogo.png" alt="Photo of a Shiba Inu">
+  <div class="signinImageContainer">
+    <img mat-card-image src="../../../assets/welcomeLogo.png" alt="welcomeLogo.jpg">
+  </div>
   <mat-card-content>
     <p>Az oldal a 2018/2019 II. tanév, Webfejlesztési keretrendszerek kurzus kötelező projektje.</p>
     <p>Gyakorlatvezető: Jánki Zoltán Richárd</p>
@@ -66,7 +33,7 @@
     </form>
       <div class="signin-buttons">
       <button color="warn" mat-raised-button type="button" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">Belépés</button>
-      <button color="primary" mat-raised-button type="button" (click)="authService.GoogleAuth()">Google fiókos belépés.</button>
+      <button color="primary" mat-raised-button type="button" (click)="authService.GoogleAuth()">Google belépés.</button>
     </div>
     <div class="forgetPass-button">
       <button mat-raised-button type="button" routerLink="/forgot-password">Elfelejtett jelszó?</button>

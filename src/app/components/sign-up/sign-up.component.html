@@ -1,29 +1,28 @@
-<div>
-  <div>
-    <div>
-      <h3>Sign Up</h3>
-      <div>
-        <input type="email" placeholder="Email Address" #userEmail required>
-      </div>
-      <div>
-        <input type="password" placeholder="Password" #userPwd required>
-      </div>
-      <div>
-        <input type="button" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
-      </div>
-      <div>
-        <span><span>Or</span></span>
-      </div>
-      <!-- Continue with Google -->
-      <div>
-        <button type="button" (click)="authService.GoogleAuth()">
-          <i></i>
-          Continue with Google
-        </button>
-      </div>
+<mat-card class="signup-card">
+  <mat-card-header>
+    <div mat-card-avatar class="signup-header-image"></div>
+    <mat-card-title>Regisztráció</mat-card-title>
+    <mat-card-subtitle>Email címedre megerősítő levelet fogunk küldeni.</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="../../../assets/adblockTerms.jpg">
+  <mat-card-content>
+    <form class="signup-form">
+      <mat-form-field class="signup-full-width">
+        <input matInput type="email" placeholder="Email Address" #userEmail required>
+      </mat-form-field>
+      <mat-form-field class="signup-full-width">
+        <input matInput type="password" placeholder="Password" #userPwd required>
+      </mat-form-field>
+    </form>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="registrateButton">
+      <button color="warn" mat-raised-button type="button" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">Regisztrálok</button>
+      <button color="primary" mat-raised-button type="button" (click)="authService.GoogleAuth()">Folytatás google fiókkal</button>
     </div>
-    <div>
-      <span>Already have an account? <span routerLink="/sign-in">Log In</span></span>
+    <div class="alreadyRegistered">
+    <span>Már regisztráltál? <button mat-button color="primary" routerLink="/sign-in">Lépj be !</button></span>
     </div>
-  </div>
-</div>
+  </mat-card-actions>
+</mat-card>

@@ -1,21 +1,25 @@
-<div>
-  <div>
-    <div>
-      <h3>Thank You for Registering</h3>
-      <div *ngIf="authService.userData as user">
-        <p>We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
-        <p>Please check your email and click on the link to verfiy your email address.</p>
-      </div>
-      <!-- Calling SendVerificationMail() method using authService Api -->
-      <div>
-        <button type="button" (click)="authService.SendVerificationMail()">
-          <i></i>
-          Resend Verification Email
-        </button>
-      </div>
+<mat-card class="verifyEmail-card">
+  <mat-card-header>
+    <div mat-card-avatar class="verifyEmail-header-image"></div>
+    <mat-card-title>Sikeres regisztráció!</mat-card-title>
+
+  </mat-card-header>
+  <img mat-card-image src="../../../assets/registerSuccessMain.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p *ngIf="authService.userData as user">
+      Gratulálunk! Sikeresen regisztráltál az oldalra, megerősítő emailt küldtünk neked a
+      <strong>{{user.email}}</strong>  email címedre, amire mostmár naponta fogunk küldeni
+      értesítést az akciókról, ajánlatokról.
+    </p>
+    <p>
+      Ha szeretnél erről leiratkozni, kattints
+      <button routerLink="/register-user" mat-button matTooltip="Sajnálom, neked nem lehet leiratkozni." matTooltipPosition="above">>>ide.<<</button>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button routerLink="/sign-in">Bejelentkezés</button>
+    <div class="alignRight">
+      <button color="warn" mat-button type="button" (click)="authService.SendVerificationMail()">Nem kaptam megerősítő emailt.</button>
     </div>
-    <div>
-      <span>Go back to?<span routerLink="/sign-in"> Sign in</span></span>
-    </div>
-  </div>
-</div>
+  </mat-card-actions>
+</mat-card>

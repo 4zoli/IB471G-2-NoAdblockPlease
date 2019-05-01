@@ -1,0 +1,16 @@
+.verifyEmail-card {
+  max-width: 400px;
+  margin: auto;
+}
+
+.verifyEmail-header-image {
+  background-image: url(../../../assets/registrateSuccessfull.png);
+  background-size: cover;
+}
+
+.alignRight {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 1%;
+}
