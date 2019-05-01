@@ -1,0 +1,73 @@
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSliderModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule
+} from '@angular/material';
+import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
+
+@NgModule({
+  imports: [
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatListModule,
+    MatDividerModule,
+    HttpClientModule,
+    MatMenuModule,
+    MatIconModule,
+    MatTabsModule,
+    MatGridListModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatSliderModule,
+    MatTooltipModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatExpansionModule,
+    MatProgressSpinnerModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatListModule,
+    MatDividerModule,
+    HttpClientModule,
+    MatMenuModule,
+    MatIconModule,
+    MatTabsModule,
+    MatGridListModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatSliderModule,
+    MatTooltipModule
+  ],
+})
+export class MyOwnCustomMaterialModule { }

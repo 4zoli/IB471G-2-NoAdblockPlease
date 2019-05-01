@@ -25,7 +25,7 @@ import { environment } from '../environments/environment';
 import { AuthService } from './shared/services/auth.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import {MyOwnCustomMaterialModule} from './material.module';
 
 @NgModule({
   declarations: [
@@ -43,8 +43,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AngularFirestoreModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    MyOwnCustomMaterialModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
