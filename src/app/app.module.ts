@@ -28,6 +28,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MyOwnCustomMaterialModule} from './material.module';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { SidenavListComponent } from './components/navigation/sidenav-list/siden
     BrowserAnimationsModule,
     MyOwnCustomMaterialModule,
     FormsModule,
+    FlexLayoutModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

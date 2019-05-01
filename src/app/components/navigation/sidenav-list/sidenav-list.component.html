@@ -1,8 +1,8 @@
-<div class="sidenavTogglingDiv">
-  <mat-nav-list *ngIf="authService.userData as user">
-    <p><img src="{{user.photoURL ? user.photoURL : '/assets/dummy-user.png'}}" alt=""></p>
-    <p>Felhasználó ID: <strong>{{user.uid}}</strong></p>
-    <p>Email cím: <strong>{{user.email}}</strong></p>
-    <p>Email Megerősítve: <strong>{{(user.emailVerified) ? 'Igen' : 'Nem'}}</strong></p>
-  </mat-nav-list>
-</div>
+<mat-nav-list *ngIf="authService.userData as user">
+  <p><img src="{{user.photoURL ? user.photoURL : '/assets/dummy-user.png'}}" alt=""></p>
+  <p>Felhasználó ID: <strong>{{user.uid}}</strong></p>
+  <p>Email cím: <strong>{{user.email}}</strong></p>
+  <p>Email Megerősítve: <strong>{{(user.emailVerified) ? 'Igen' : 'Nem'}}</strong></p>
+  <mat-list-item><button mat-icon-button (click)="onClose()"><mat-icon>eject</mat-icon><span class="nav-caption">Logout</span></button></mat-list-item>
+</mat-nav-list>
+
