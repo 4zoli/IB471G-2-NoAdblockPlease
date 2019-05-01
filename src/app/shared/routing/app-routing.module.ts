@@ -7,8 +7,8 @@ import { DashboardComponent } from '../../components/dashboard/dashboard.compone
 import { ForgotPasswordComponent } from '../../components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from '../../components/verify-email/verify-email.component';
 // Import canActivate guard services
-import { AuthGuard } from "../../shared/guard/auth.guard";
-import { SecureInnerPagesGuard } from "../../shared/guard/secure-inner-pages.guard";
+import { AuthGuard } from '../../shared/guard/auth.guard';
+import { SecureInnerPagesGuard } from '../../shared/guard/secure-inner-pages.guard';
 // Include route guard in routes array
 const routes: Routes = [
 { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
