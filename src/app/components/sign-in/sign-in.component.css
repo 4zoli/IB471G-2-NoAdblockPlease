@@ -1,0 +1,46 @@
+.example-card {
+  max-width: 400px;
+  margin:auto;
+}
+
+.example-header-image {
+  background-image: url(../../../assets/welcomeIcon.png);
+  background-size: cover;
+}
+
+#registerButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+
+.signin-form {
+  /*background-color: red;*/
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin:auto;
+}
+
+.signin-full-width {
+  /*background-color: black;*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forgetPass-button  {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-top: 1%;
+}

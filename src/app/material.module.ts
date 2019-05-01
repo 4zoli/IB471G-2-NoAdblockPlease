@@ -4,7 +4,7 @@ import {
   MatCheckboxModule,
   MatDatepickerModule,
   MatDividerModule,
-  MatExpansionModule,
+  MatExpansionModule, MatFormField,
   MatGridListModule,
   MatIconModule,
   MatInputModule,
@@ -67,7 +67,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatRadioModule,
     MatDatepickerModule,
     MatSliderModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatFormField
   ],
 })
 export class MyOwnCustomMaterialModule { }

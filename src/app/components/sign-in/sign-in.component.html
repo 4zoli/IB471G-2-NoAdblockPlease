@@ -1,55 +1,69 @@
-<div>
-  <div>
-    <div>
-      <h3>Sign In</h3>
-      <div>
-        <input type="text" placeholder="Username" #userName required>
-      </div>
-      <div>
-        <input type="password" placeholder="Password" #userPassword required>
-      </div>
-      <!-- Calling SignIn Api from AuthService -->
-      <div>
-        <input type="button" value="Log in"
-          (click)="authService.SignIn(userName.value, userPassword.value)">
-      </div>
-      <div>
-        <span><span>Or</span></span>
-      </div>
-      <!-- Calling GoogleAuth Api from AuthService -->
-      <div>
-        <button type="button" (click)="authService.GoogleAuth()">
-          <i></i>
-          Log in with Google
-        </button>
-      </div>
-      <div>
-        <span routerLink="/forgot-password">Forgot Password?</span>
-      </div>
-    </div>
-    <div>
-      <span>Don't have an account?<span routerLink="/register-user"> Sign Up</span></span>
-    </div>
-  </div>
-</div>
+<!--<div>-->
+  <!--<div>-->
+    <!--<div>-->
+      <!--<h3>Sign In</h3>-->
+      <!--<div>-->
+        <!--<input type="text" placeholder="Username" #userName required>-->
+      <!--</div>-->
+      <!--<div>-->
+        <!--<input type="password" placeholder="Password" #userPassword required>-->
+      <!--</div>-->
+      <!--&lt;!&ndash; Calling SignIn Api from AuthService &ndash;&gt;-->
+      <!--<div>-->
+        <!--<input type="button" value="Log in"-->
+          <!--(click)="authService.SignIn(userName.value, userPassword.value)">-->
+      <!--</div>-->
+      <!--<div>-->
+        <!--<span><span>Or</span></span>-->
+      <!--</div>-->
+      <!--&lt;!&ndash; Calling GoogleAuth Api from AuthService &ndash;&gt;-->
+      <!--<div>-->
+        <!--<button type="button" (click)="authService.GoogleAuth()">-->
+          <!--<i></i>-->
+          <!--Log in with Google-->
+        <!--</button>-->
+      <!--</div>-->
+      <!--<div>-->
+        <!--<span routerLink="/forgot-password">Forgot Password?</span>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div>-->
+      <!--<span>Don't have an account?<span routerLink="/register-user"> Sign Up</span></span>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-title>NO ADBLOCK PLEASE</mat-card-title>
+    <mat-card-subtitle>A játék használatához be kell jelentkezned.</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <div id="registerButtonContainer">
+    <button mat-raised-button type="button" routerLink="/register-user">Regisztráció </button>
+  </div>
+  <img mat-card-image src="../../../assets/welcomeLogo.png" alt="Photo of a Shiba Inu">
   <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
+    <p>Az oldal a 2018/2019 II. tanév, Webfejlesztési keretrendszerek kurzus kötelező projektje.</p>
+    <p>Gyakorlatvezető: Jánki Zoltán Richárd</p>
+    <p>Hallgató: Horváth Olivér Zoltán</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <form class="signin-form">
+      <mat-form-field class="signin-full-width">
+        <input matInput type="text" placeholder="Email cím" #userName required>
+      </mat-form-field>
+      <mat-form-field class="signin-full-width">
+        <input matInput type="password" placeholder="Jelszó" #userPassword required>
+      </mat-form-field>
+    </form>
+      <div class="signin-buttons">
+      <button color="warn" mat-raised-button type="button" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">Belépés</button>
+      <button color="primary" mat-raised-button type="button" (click)="authService.GoogleAuth()">Google fiókos belépés.</button>
+    </div>
+    <div class="forgetPass-button">
+      <button mat-raised-button type="button" routerLink="/forgot-password">Elfelejtett jelszó?</button>
+    </div>
   </mat-card-actions>
 </mat-card>
 

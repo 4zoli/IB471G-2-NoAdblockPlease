@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // Reactive Form
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 // App routing modules
 import { AppRoutingModule } from './shared/routing/app-routing.module';
@@ -44,7 +44,8 @@ import {MyOwnCustomMaterialModule} from './material.module';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MyOwnCustomMaterialModule
+    MyOwnCustomMaterialModule,
+    FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
