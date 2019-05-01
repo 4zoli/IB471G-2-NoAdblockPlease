@@ -1,36 +1,22 @@
-<!-- Top navigation -->
-<nav>
-  <a routerLink="/register-student">
-    <span>Dashboard</span>
-  </a>
-</nav>
-<!-- Sidebar navigation -->
-<div>
-  <div>
-    <nav>
-      <div>
-        <ul>
-          <li>
-            <a>
-              <i></i>User Profile
-            </a>
-          </li>
-          <!-- Calling SignOut() Api from AuthService -->
-          <li>
-            <a (click)="authService.SignOut()">
-              <i></i>Log out
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Main content -->
+<mat-toolbar color="warn">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>LOGO</div>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+      <li *ngIf= "authService.afAuth" (click) = "authService.SignOut()"><a>Logout</a></li>
+    </ul>
+  </div>
+</mat-toolbar>
+
+
+
     <main role="main">
       <div>
 
-        <div>
-          <h1>User Profile</h1>
-        </div>
         <!-- Show user data when logged in -->
         <div *ngIf="authService.userData as user">
           <div>
@@ -47,5 +33,3 @@
         </div>
       </div>
     </main>
-  </div>
-</div>
