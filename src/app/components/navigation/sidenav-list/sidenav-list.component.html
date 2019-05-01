@@ -1,8 +1,19 @@
-<mat-nav-list *ngIf="authService.userData as user">
-  <p><img src="{{user.photoURL ? user.photoURL : '/assets/dummy-user.png'}}" alt=""></p>
-  <p>Felhasználó ID: <strong>{{user.uid}}</strong></p>
-  <p>Email cím: <strong>{{user.email}}</strong></p>
-  <p>Email Megerősítve: <strong>{{(user.emailVerified) ? 'Igen' : 'Nem'}}</strong></p>
-  <mat-list-item><button mat-icon-button (click)="onClose()"><mat-icon>eject</mat-icon><span class="nav-caption">Logout</span></button></mat-list-item>
-</mat-nav-list>
-
+<h1 style=" text-align: center;">No Adblock Please</h1>
+<mat-card class="example-card" *ngIf="authService.userData as user">
+  <mat-card-header>
+    <div>
+      <button style="float: right; margin-right: 2%; margin-bottom: 2%" mat-icon-button (click)="onClose()"><mat-icon>arrow_left</mat-icon></button>
+    </div>
+    <mat-card-title>{{user.displayName}}</mat-card-title>
+    <mat-card-subtitle>Regisztrált felhasználó</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{user.photoURL ? user.photoURL : '/assets/dummy-user.png'}}" alt="">
+  <mat-card-content>
+    <p>Felhasználó ID: <strong>{{user.uid}}</strong></p>
+    <p>Email cím: <strong>{{user.email}}</strong></p>
+    <p>Email Megerősítve: <strong>{{(user.emailVerified) ? 'Igen' : 'Nem'}}</strong></p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-icon-button><mat-icon (click)="authService.SignOut()">exit_to_app</mat-icon><span class="nav-caption">Kijelentkezés</span></button>
+  </mat-card-actions>
+</mat-card>

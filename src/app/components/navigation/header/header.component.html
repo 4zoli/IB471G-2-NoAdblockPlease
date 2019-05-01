@@ -6,7 +6,7 @@
   </div>
 
       <img src="{{user.photoURL ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
-  <div fxShow="true" fxHide.lt-md="true" fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+      <div fxShow="true" fxHide.lt-md="true" fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
       <h1>Üdvözöllek, {{(user.displayName) ? user.displayName : 'User'}}</h1>
       <span class="fill-remaining-space">No Adblock Please</span>
       <button mat-button *ngIf="authService.afAuth.authState" (click)="authService.SignOut()">Kijelentkezés</button>
