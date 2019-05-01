@@ -26,6 +26,8 @@ import { AuthService } from './shared/services/auth.service';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MyOwnCustomMaterialModule} from './material.module';
+import { HeaderComponent } from './components/navigation/header/header.component';
+import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import {MyOwnCustomMaterialModule} from './material.module';
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,

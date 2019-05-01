@@ -13,7 +13,7 @@ import {
   MatPaginatorModule,
   MatProgressSpinnerModule,
   MatRadioModule,
-  MatSelectModule,
+  MatSelectModule, MatSidenavModule,
   MatSliderModule,
   MatTabsModule,
   MatToolbarModule,
@@ -44,7 +44,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatRadioModule,
     MatDatepickerModule,
     MatSliderModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSidenavModule
   ],
   exports: [
     MatButtonModule,
@@ -68,7 +69,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatDatepickerModule,
     MatSliderModule,
     MatTooltipModule,
-    MatFormField
+    MatFormField,
+    MatSidenavModule
   ],
 })
 export class MyOwnCustomMaterialModule { }
