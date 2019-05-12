@@ -29,6 +29,11 @@ import {MyOwnCustomMaterialModule} from './material.module';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { AdvertoneComponent } from './components/pages/advertone/advertone.component';
+import { AdverttwoComponent } from './components/pages/adverttwo/adverttwo.component';
+import { AdvertthreeComponent } from './components/pages/advertthree/advertthree.component';
+import { AdvertfourComponent } from './components/pages/advertfour/advertfour.component';
+import { AdvertfiveComponent } from './components/pages/advertfive/advertfive.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     ForgotPasswordComponent,
     VerifyEmailComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    AdvertoneComponent,
+    AdverttwoComponent,
+    AdvertthreeComponent,
+    AdvertfourComponent,
+    AdvertfiveComponent
   ],
   imports: [
     BrowserModule,

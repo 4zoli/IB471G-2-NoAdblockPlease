@@ -40,7 +40,7 @@ export class AuthService {
         window.alert(error.message);
       });
   }
-      
+
   // Sign up with email/password
   SignUp(email, password) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
@@ -64,7 +64,7 @@ export class AuthService {
   ForgotPassword(passwordResetEmail) {
     return this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
-        window.alert('Password reset email sent, check your inbox.');
+        window.alert('A jelszó visszaállító email elküldve, kérlek ellenőrizd a fiókod.');
       }).catch((error) => {
         window.alert(error)
       });

@@ -10,13 +10,29 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
   @ViewChild('sidenav') sidenav;
-
+  randomNumberMain: number;
 
   constructor(
     public authService: AuthService,
-  ) {}
+    public router: Router
+  ) {
+    this.generateRandomNumber();
+  }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
+
+  generateRandomNumber()  {
+    setTimeout(() => {
+      console.log('Random szám generálva' + this.randomNumberMain);
+      console.log(this.randomNumberMain = Math.ceil(Math.random() * (5 - 1) + 1));
+      this.randomNumberMain = Math.ceil(this.randomNumberMain = (Math.random() * (5 - 1) + 1));
+      this.generateRandomNumber();
+    }, 2000);
+
+  }
 
 
 }
+
+
