@@ -24,6 +24,7 @@
     justify-content: center;
   }
 
+
   .right  {
     border: 1px solid red;
     display: flex;
@@ -31,12 +32,22 @@
     height: 20%;
     justify-content: center;
   }
+
+  app-advertone ,app-adverttwo ,app-advertthree ,app-advertfour ,app-advertfive{
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    width: 20%;
+  }
 }
 
 
 @media screen and (min-width: 1439px) {
   .componentContainer {
     margin-top: 0.5%;
+  }
+
+  mat-toolbar {
+    flex-direction: column;
   }
 
   .componentContainer:after {
@@ -68,5 +79,10 @@
 
     height: 90vh;
     margin-left: 0.5%;
+  }
+
+  app-advertone ,app-adverttwo ,app-advertthree ,app-advertfour ,app-advertfive{
+  position: relative;
+    width: 100%;
   }
 }

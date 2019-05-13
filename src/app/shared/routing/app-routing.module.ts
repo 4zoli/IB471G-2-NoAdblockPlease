@@ -14,19 +14,22 @@ import {AdverttwoComponent} from '../../components/pages/adverttwo/adverttwo.com
 import {AdvertthreeComponent} from '../../components/pages/advertthree/advertthree.component';
 import {AdvertfourComponent} from '../../components/pages/advertfour/advertfour.component';
 import {AdvertfiveComponent} from '../../components/pages/advertfive/advertfive.component';
+
 // Include route guard in routes array
 const routes: Routes = [
 { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
 { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard]},
 { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard]},
-{ path: 'main', component: MainComponent, canActivate: [AuthGuard] },
-{ path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
+{ path: 'main', component: MainComponent, canActivate: [AuthGuard]},
+  { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
 { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'advertone', component: AdvertoneComponent, canActivate: [SecureInnerPagesGuard]},
   { path: 'adverttwo', component: AdverttwoComponent, canActivate: [SecureInnerPagesGuard]},
   { path: 'advertthree', component: AdvertthreeComponent, canActivate: [SecureInnerPagesGuard]},
   { path: 'advertfour', component: AdvertfourComponent, canActivate: [SecureInnerPagesGuard]},
-  { path: 'advertfive', component: AdvertfiveComponent, canActivate: [SecureInnerPagesGuard]}
+  { path: 'advertfive', component: AdvertfiveComponent, canActivate: [SecureInnerPagesGuard]},
+
+
 ];
 @NgModule({
 imports: [RouterModule.forRoot(routes)],

@@ -1,6 +1,8 @@
 import {Component, OnInit, NgZone, ViewChild} from '@angular/core';
 import { AuthService } from '../../shared/services/auth.service';
 import { Router } from '@angular/router';
+import { RouterModule} from '@angular/router';
+import { AppRoutingModule } from '../../shared/routing/app-routing.module';
 
 
 @Component({
@@ -10,8 +12,8 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
   @ViewChild('sidenav') sidenav;
-  public randomNumberRight: number;
-  public randomNumberLeft: number;
+  private randomNumberRight: number;
+  private randomNumberLeft: number;
 
   constructor(
     public authService: AuthService,
