@@ -6,15 +6,28 @@
     <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
     <main><router-outlet></router-outlet></main>
 
-    <h1>Találd meg az oldalon azt a rejtett elemet, amelyik elvisz téged a nyereményedig! </h1>
-    <app-advertone *ngIf="[randomNumberMain] == 1"></app-advertone>
-    <app-adverttwo *ngIf="[randomNumberMain] == 2"></app-adverttwo>
-    <app-advertthree *ngIf="[randomNumberMain] == 3"></app-advertthree>
-    <app-advertfour *ngIf="[randomNumberMain] == 4"></app-advertfour>
-    <app-advertfive *ngIf="[randomNumberMain] == 5"></app-advertfive>
 
+    <div class="componentContainer">
+    <mat-toolbar class="left">
+      <app-advertone *ngIf="[randomNumberLeft] == 1"></app-advertone>
+      <app-adverttwo *ngIf="[randomNumberLeft] == 2"></app-adverttwo>
+      <app-advertthree *ngIf="[randomNumberLeft] == 3"></app-advertthree>
+      <app-advertfour *ngIf="[randomNumberLeft] == 4"></app-advertfour>
+      <app-advertfive *ngIf="[randomNumberLeft] == 5"></app-advertfive>
+    </mat-toolbar>
 
+    <div class="middle-content">
+      <h1>Találd meg az oldalon azt a rejtett elemet, amelyik elvisz téged a nyereményedig! </h1>
+    </div>
 
+    <mat-toolbar class="right">
+      <app-advertone *ngIf="[randomNumberRight] == 1"></app-advertone>
+      <app-adverttwo *ngIf="[randomNumberRight] == 2"></app-adverttwo>
+      <app-advertthree *ngIf="[randomNumberRight] == 3"></app-advertthree>
+      <app-advertfour *ngIf="[randomNumberRight] == 4"></app-advertfour>
+      <app-advertfive *ngIf="[randomNumberRight] == 5"></app-advertfive>
+    </mat-toolbar>
+    </div>
 
   </mat-sidenav-content>
 </mat-sidenav-container>

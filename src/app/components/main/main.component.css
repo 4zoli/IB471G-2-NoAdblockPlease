@@ -2,3 +2,71 @@
   /*background-color: lightskyblue;*/
   min-height: 93vh !important;
 }
+@media screen and (max-width: 1438px) {
+  .componentContainer {
+    margin-top: 1%;
+  }
+
+  .middle-content{
+    border: 1px solid green;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 60vh;
+  }
+
+  .left {
+    border: 1px solid blue;
+    display: flex;
+    flex: 1 1 auto;
+    height: 20%;
+    justify-content: center;
+  }
+
+  .right  {
+    border: 1px solid red;
+    display: flex;
+    flex: 1 1 auto;
+    height: 20%;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (min-width: 1439px) {
+  .componentContainer {
+    margin-top: 0.5%;
+  }
+
+  .componentContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .middle-content {
+    border: 1px solid green;
+    float: left;
+    width: 58.7%;
+    padding: 1%;
+    height: 90vh;
+  }
+
+  .left {
+    border: 1px solid red;
+    float: left;
+    width: 19%;
+    height: 90vh;
+    margin-right: 0.5%;
+  }
+
+  .right {
+    border: 1px solid red;
+    float: left;
+    width: 19%;
+
+    height: 90vh;
+    margin-left: 0.5%;
+  }
+}

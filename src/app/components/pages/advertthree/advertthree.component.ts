@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LinkopenerService} from '../../../shared/services/linkopener.service';
 
 @Component({
   selector: 'app-advertthree',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvertthreeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public linkOpener: LinkopenerService
+  ) { }
 
   ngOnInit() {
   }
