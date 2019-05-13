@@ -4,7 +4,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-    <main><router-outlet></router-outlet></main>
+    <main></main>
 
 
     <div class="componentContainer">
@@ -22,7 +22,7 @@
     </mat-toolbar>
 
     <div class="middle-content">
-
+      <router-outlet></router-outlet>
     </div>
 
     <mat-toolbar class="right">
@@ -41,6 +41,3 @@
 
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-
-

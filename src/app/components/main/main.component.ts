@@ -6,12 +6,14 @@ import { AppRoutingModule } from '../../shared/routing/app-routing.module';
 
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
   @ViewChild('sidenav') sidenav;
+  @ViewChild('firstpage') firstpage;
+  @ViewChild('secondpage') secondpage;
   private randomNumberRight: number;
   private randomNumberLeft: number;
 

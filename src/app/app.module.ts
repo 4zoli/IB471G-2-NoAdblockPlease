@@ -34,6 +34,8 @@ import { AdverttwoComponent } from './components/pages/adverttwo/adverttwo.compo
 import { AdvertthreeComponent } from './components/pages/advertthree/advertthree.component';
 import { AdvertfourComponent } from './components/pages/advertfour/advertfour.component';
 import { AdvertfiveComponent } from './components/pages/advertfive/advertfive.component';
+import { FirstpageComponent } from './components/main/firstpage/firstpage.component';
+import { SecondpageComponent } from './components/main/secondpage/secondpage.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { AdvertfiveComponent } from './components/pages/advertfive/advertfive.co
     AdverttwoComponent,
     AdvertthreeComponent,
     AdvertfourComponent,
-    AdvertfiveComponent
+    AdvertfiveComponent,
+    FirstpageComponent,
+    SecondpageComponent
   ],
   imports: [
     BrowserModule,

@@ -14,13 +14,21 @@ import {AdverttwoComponent} from '../../components/pages/adverttwo/adverttwo.com
 import {AdvertthreeComponent} from '../../components/pages/advertthree/advertthree.component';
 import {AdvertfourComponent} from '../../components/pages/advertfour/advertfour.component';
 import {AdvertfiveComponent} from '../../components/pages/advertfive/advertfive.component';
+import {FirstpageComponent} from '../../components/main/firstpage/firstpage.component';
+import {SecondpageComponent} from '../../components/main/secondpage/secondpage.component';
 
 // Include route guard in routes array
 const routes: Routes = [
 { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
 { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard]},
 { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard]},
-{ path: 'main', component: MainComponent, canActivate: [AuthGuard]},
+{ path: 'main', component: MainComponent, canActivate: [AuthGuard],
+  children: [
+    // { path: '', redirectTo: 'first', pathMatch: 'full' },
+    { path: 'first', component: FirstpageComponent},
+    { path: 'second', component: SecondpageComponent}
+  ]
+},
   { path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [SecureInnerPagesGuard] },
 { path: 'verify-email-address', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'advertone', component: AdvertoneComponent, canActivate: [SecureInnerPagesGuard]},
