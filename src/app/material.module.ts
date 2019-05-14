@@ -1,5 +1,5 @@
 import {
-  MatBadgeModule,
+  MatBadgeModule, MatBottomSheetModule,
   MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
@@ -49,7 +49,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatSidenavModule,
     MatProgressBarModule,
     MatDialogModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatBottomSheetModule
   ],
   exports: [
     MatButtonModule,
@@ -77,7 +78,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatSidenavModule,
     MatProgressBarModule,
     MatDialogModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatBottomSheetModule
   ],
 })
 export class MyOwnCustomMaterialModule { }

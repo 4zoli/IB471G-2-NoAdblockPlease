@@ -1,7 +1,9 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {DialogData} from '../firstpage/firstpage.component';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatBottomSheet, MatBottomSheetRef, MatDialog, MatDialogRef} from '@angular/material';
 import {AuthService} from '../../../shared/services/auth.service';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+
 
 
 @Component({
@@ -11,9 +13,9 @@ import {AuthService} from '../../../shared/services/auth.service';
 })
 export class SecondpageComponent implements OnInit {
   constructor(
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private bottomSheet: MatBottomSheet
   )  { }
-
 
   ngOnInit() {
   }
@@ -23,7 +25,39 @@ export class SecondpageComponent implements OnInit {
       width: '250px',
     });
   }
+
+
+
+  openBottomSheet(): void {
+    this.bottomSheet.open(BottomSheetOverviewExampleSheetComponent);
+  }
 }
+
+
+
+@Component({
+  selector: 'app-bottom-sheet-overview-example-sheet',
+  templateUrl: 'bottom-sheet-overview-example-sheet.html',
+})
+export class BottomSheetOverviewExampleSheetComponent {
+  constructor(
+    private bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheetComponent>,
+    public dialog2: MatDialog
+              ) {}
+  openLink(event: MouseEvent): void {
+    this.bottomSheetRef.dismiss();
+    event.preventDefault();
+  }
+  openDialog(): void {
+    const dialogRef2 = this.dialog2.open(DialogOverview2Component, {
+      width: '250px',
+    });
+  }
+}
+
+
+
+
 
 @Component({
   selector: 'app-dialog-overview',
