@@ -34,8 +34,14 @@ import { AdverttwoComponent } from './components/pages/adverttwo/adverttwo.compo
 import { AdvertthreeComponent } from './components/pages/advertthree/advertthree.component';
 import { AdvertfourComponent } from './components/pages/advertfour/advertfour.component';
 import { AdvertfiveComponent } from './components/pages/advertfive/advertfive.component';
-import { FirstpageComponent } from './components/main/firstpage/firstpage.component';
-import { SecondpageComponent } from './components/main/secondpage/secondpage.component';
+import {DialogOverviewComponent, FirstpageComponent} from './components/main/firstpage/firstpage.component';
+import { AdvertsixComponent } from './components/pages/advertsix/advertsix.component';
+import { AdvertsevenComponent } from './components/pages/advertseven/advertseven.component';
+import { AdverteightComponent } from './components/pages/adverteight/adverteight.component';
+import { AdvertnineComponent } from './components/pages/advertnine/advertnine.component';
+import { AdverttenComponent } from './components/pages/advertten/advertten.component';
+import {SecondpageComponent} from './components/main/secondpage/secondpage.component';
+
 
 @NgModule({
   declarations: [
@@ -53,8 +59,15 @@ import { SecondpageComponent } from './components/main/secondpage/secondpage.com
     AdvertfourComponent,
     AdvertfiveComponent,
     FirstpageComponent,
-    SecondpageComponent
+    SecondpageComponent,
+    AdvertsixComponent,
+    AdvertsevenComponent,
+    AdverteightComponent,
+    AdvertnineComponent,
+    AdverttenComponent,
+    DialogOverviewComponent
   ],
+  entryComponents: [DialogOverviewComponent],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),

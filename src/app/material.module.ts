@@ -1,8 +1,9 @@
 import {
+  MatBadgeModule,
   MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
-  MatDatepickerModule,
+  MatDatepickerModule, MatDialogModule,
   MatDividerModule,
   MatExpansionModule, MatFormField,
   MatGridListModule,
@@ -10,7 +11,7 @@ import {
   MatInputModule,
   MatListModule,
   MatMenuModule,
-  MatPaginatorModule,
+  MatPaginatorModule, MatProgressBarModule,
   MatProgressSpinnerModule,
   MatRadioModule,
   MatSelectModule, MatSidenavModule,
@@ -45,7 +46,10 @@ import {HttpClientModule} from '@angular/common/http';
     MatDatepickerModule,
     MatSliderModule,
     MatTooltipModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatProgressBarModule,
+    MatDialogModule,
+    MatBadgeModule
   ],
   exports: [
     MatButtonModule,
@@ -70,7 +74,10 @@ import {HttpClientModule} from '@angular/common/http';
     MatSliderModule,
     MatTooltipModule,
     MatFormField,
-    MatSidenavModule
+    MatSidenavModule,
+    MatProgressBarModule,
+    MatDialogModule,
+    MatBadgeModule
   ],
 })
 export class MyOwnCustomMaterialModule { }

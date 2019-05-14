@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./secondpage.component.css']
 })
 export class SecondpageComponent implements OnInit {
-
-  constructor() { }
+    constructor( ) { }
 
   ngOnInit() {
   }
-
 }

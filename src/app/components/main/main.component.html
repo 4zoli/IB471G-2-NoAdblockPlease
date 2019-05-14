@@ -9,33 +9,56 @@
 
     <div class="componentContainer">
     <mat-toolbar class="left">
-      <app-advertone *ngIf="[randomNumberLeft] == 1"></app-advertone>
-      <app-adverttwo *ngIf="[randomNumberLeft] == 2"></app-adverttwo>
-      <app-advertthree *ngIf="[randomNumberLeft] == 3"></app-advertthree>
-      <app-advertfour *ngIf="[randomNumberLeft] == 4"></app-advertfour>
-      <app-advertfive *ngIf="[randomNumberLeft] == 5"></app-advertfive>
-      <app-advertone *ngIf="[randomNumberLeft] == 2"></app-advertone>
-      <app-adverttwo *ngIf="[randomNumberLeft] == 3"></app-adverttwo>
-      <app-advertthree *ngIf="[randomNumberLeft] == 4"></app-advertthree>
-      <app-advertfour *ngIf="[randomNumberLeft] == 5"></app-advertfour>
-      <app-advertfive *ngIf="[randomNumberLeft] == 1"></app-advertfive>
+      <app-advertone *ngIf="[randomSlowLeftNumber] == 1"></app-advertone>
+      <app-advertsix *ngIf="[randomFastLeftNumber] == 2"></app-advertsix>
+      <app-adverttwo *ngIf="[randomSlowLeftNumber] == 2"></app-adverttwo>
+      <app-advertseven *ngIf="[randomFastLeftNumber] == 3"></app-advertseven>
+      <app-advertthree *ngIf="[randomSlowLeftNumber] == 3"></app-advertthree>
+      <app-adverteight *ngIf="[randomFastLeftNumber] == 4"></app-adverteight>
+      <app-advertfour *ngIf="[randomSlowLeftNumber] == 4"></app-advertfour>
+      <app-advertnine *ngIf="[randomFastLeftNumber] == 5"></app-advertnine>
+      <app-advertfive *ngIf="[randomSlowLeftNumber] == 5"></app-advertfive>
+      <app-advertten *ngIf="[randomFastLeftNumber] == 1"></app-advertten>
+      <app-advertone *ngIf="[randomSlowRightNumber] == 3"></app-advertone>
+      <app-advertsix *ngIf="[randomFastRightNumber] == 4"></app-advertsix>
+      <app-adverttwo *ngIf="[randomSlowRightNumber] == 4"></app-adverttwo>
+      <app-advertseven *ngIf="[randomFastRightNumber] == 5"></app-advertseven>
+      <app-advertthree *ngIf="[randomSlowRightNumber] == 5"></app-advertthree>
+      <app-adverteight *ngIf="[randomFastRightNumber] == 1"></app-adverteight>
+      <app-advertfour *ngIf="[randomSlowRightNumber] == 1"></app-advertfour>
+      <app-advertnine *ngIf="[randomFastRightNumber] == 2"></app-advertnine>
+      <app-advertfive *ngIf="[randomSlowRightNumber] == 2"></app-advertfive>
+      <app-advertten *ngIf="[randomFastRightNumber] == 3"></app-advertten>
     </mat-toolbar>
 
     <div class="middle-content">
+      <mat-progress-bar color="primary" mode="query"></mat-progress-bar>
+      <h1>Üdvözöllek</h1>
+      <span>Leírás: Találd meg azt a linket, amely elvezet a következő pályára. </span><br>
       <router-outlet></router-outlet>
     </div>
 
     <mat-toolbar class="right">
-      <app-advertone *ngIf="[randomNumberRight] == 1"></app-advertone>
-      <app-adverttwo *ngIf="[randomNumberRight] == 2"></app-adverttwo>
-      <app-advertthree *ngIf="[randomNumberRight] == 3"></app-advertthree>
-      <app-advertfour *ngIf="[randomNumberRight] == 4"></app-advertfour>
-      <app-advertfive *ngIf="[randomNumberRight] == 5"></app-advertfive>
-      <app-advertone *ngIf="[randomNumberLeft] == 2"></app-advertone>
-      <app-adverttwo *ngIf="[randomNumberLeft] == 3"></app-adverttwo>
-      <app-advertthree *ngIf="[randomNumberLeft] == 4"></app-advertthree>
-      <app-advertfour *ngIf="[randomNumberLeft] == 5"></app-advertfour>
-      <app-advertfive *ngIf="[randomNumberLeft] == 1"></app-advertfive>
+      <app-advertone *ngIf="[randomSlowRightNumber] == 1"></app-advertone>
+      <app-advertsix *ngIf="[randomFastRightNumber] == 1"></app-advertsix>
+      <app-adverttwo *ngIf="[randomSlowRightNumber] == 2"></app-adverttwo>
+      <app-advertseven *ngIf="[randomFastRightNumber] == 2"></app-advertseven>
+      <app-advertthree *ngIf="[randomSlowRightNumber] == 3"></app-advertthree>
+      <app-adverteight *ngIf="[randomFastRightNumber] == 3"></app-adverteight>
+      <app-advertfour *ngIf="[randomSlowRightNumber] == 4"></app-advertfour>
+      <app-advertnine *ngIf="[randomFastRightNumber] == 4"></app-advertnine>
+      <app-advertfive *ngIf="[randomSlowRightNumber] == 5"></app-advertfive>
+      <app-advertten *ngIf="[randomFastRightNumber] == 5"></app-advertten>
+      <app-advertone *ngIf="[randomSlowLeftNumber] == 2"></app-advertone>
+      <app-advertsix *ngIf="[randomFastLeftNumber] == 1"></app-advertsix>
+      <app-adverttwo *ngIf="[randomSlowLeftNumber] == 3"></app-adverttwo>
+      <app-advertseven *ngIf="[randomFastLeftNumber] == 2"></app-advertseven>
+      <app-advertthree *ngIf="[randomSlowLeftNumber] == 4"></app-advertthree>
+      <app-adverteight *ngIf="[randomFastLeftNumber] == 3"></app-adverteight>
+      <app-advertfour *ngIf="[randomSlowLeftNumber] == 5"></app-advertfour>
+      <app-advertnine *ngIf="[randomFastLeftNumber] == 4"></app-advertnine>
+      <app-advertfive *ngIf="[randomSlowLeftNumber] == 1"></app-advertfive>
+      <app-advertten *ngIf="[randomFastLeftNumber] == 5"></app-advertten>
     </mat-toolbar>
     </div>
 

@@ -14,27 +14,38 @@ export class MainComponent implements OnInit {
   @ViewChild('sidenav') sidenav;
   @ViewChild('firstpage') firstpage;
   @ViewChild('secondpage') secondpage;
-  private randomNumberRight: number;
-  private randomNumberLeft: number;
+  public randomSlowRightNumber: number;
+  public randomSlowLeftNumber: number;
+  public randomFastLeftNumber: number;
+  public randomFastRightNumber: number;
 
   constructor(
     public authService: AuthService,
     public router: Router
   ) {
-    this.generateRandomNumber();
+    this.generateRandomNumberSlow();
+    this.generateRandomNumberFast();
   }
 
   ngOnInit() {
   }
-  generateRandomNumber()  {
+  generateRandomNumberSlow()  {
     setTimeout(() => {
-      console.log('Bal' , this.randomNumberLeft = Math.ceil(Math.random() * (5 - 1) + 1));
-      console.log('Jobb' , this.randomNumberRight = Math.ceil(Math.random() * (5 - 1) + 1));
-      this.randomNumberLeft = Math.ceil(this.randomNumberLeft = (Math.random() * (5 - 1) + 1));
-      this.randomNumberRight = Math.ceil(this.randomNumberRight = (Math.random() * (5 - 1) + 1));
-      this.generateRandomNumber();
-    }, 2000);
+      // console.log('SlowLeftNumber' , this.randomSlowLeftNumber = Math.ceil(Math.random() * (5 - 1) + 1));
+      // console.log('SlowRightNumber' , this.randomSlowRightNumber = Math.ceil(Math.random() * (5 - 1) + 1));
+      this.randomSlowLeftNumber = Math.ceil(this.randomSlowLeftNumber = (Math.random() * (5 - 1) + 1));
+      this.randomSlowRightNumber = Math.ceil(this.randomSlowRightNumber = (Math.random() * (5 - 1) + 1));
+      this.generateRandomNumberSlow();
+    }, 1700);
+  }
 
+  generateRandomNumberFast()  {
+    setTimeout(() => {
+      // console.log('FastLeftNumber', this.randomFastLeftNumber = Math.ceil(Math.random() * (5 - 1) + 1));
+      // console.log('FastLeftNumber', this.randomFastRightNumber = Math.ceil(Math.random() * (5 - 1) + 1));
+      this.randomFastLeftNumber = Math.ceil(this.randomFastLeftNumber = (Math.random() * (5 - 1) + 1));
+      this.randomFastRightNumber = Math.ceil(this.randomFastRightNumber = (Math.random() * (5 - 1) + 1));
+    }, 900);
   }
 
 

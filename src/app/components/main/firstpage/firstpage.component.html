@@ -1,5 +1,19 @@
-<p>
-  firstpage works!
-</p>
+<div class="toMiddleContainer">
+<ol>
+  <li><span>Gratulálok, Nyertél ! </span></li>
+  <li>
+    <mat-form-field>
 
-<button routerLink="/main/second">SECOND PAGE</button>
+      <input matInput [(ngModel)]="name" placeholder="Kérlek írd be a neved!">
+    </mat-form-field>
+  </li>
+  <li>
+    <!--<button mat-raised-button (click)="openDialog()">Tovább</button>-->
+
+    <button mat-raised-button color="warn" (click)="openDialog()"
+            matBadge="{{counter}}" matBadgePosition="after" matBadgeColor="primary">
+      Tovább
+    </button>
+  </li>
+</ol>
+</div>
