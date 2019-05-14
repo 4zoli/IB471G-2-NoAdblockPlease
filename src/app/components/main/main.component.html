@@ -35,6 +35,11 @@
       <mat-progress-bar color="primary" mode="query"></mat-progress-bar>
       <h1>Üdvözöllek</h1>
       <span>Leírás: Találd meg azt a linket, amely elvezet a következő pályára. </span><br>
+      <div style="text-align:center;">
+        <button
+          matTooltip="Rosszlányok"
+          mat-raised-button *ngIf="this.SecCounter == 1">Segítség</button>
+      </div>
       <router-outlet></router-outlet>
     </div>
 

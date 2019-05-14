@@ -40,7 +40,7 @@ import { AdvertsevenComponent } from './components/pages/advertseven/advertseven
 import { AdverteightComponent } from './components/pages/adverteight/adverteight.component';
 import { AdvertnineComponent } from './components/pages/advertnine/advertnine.component';
 import { AdverttenComponent } from './components/pages/advertten/advertten.component';
-import {SecondpageComponent} from './components/main/secondpage/secondpage.component';
+import {DialogOverview2Component, SecondpageComponent} from './components/main/secondpage/secondpage.component';
 
 
 @NgModule({
@@ -65,9 +65,10 @@ import {SecondpageComponent} from './components/main/secondpage/secondpage.compo
     AdverteightComponent,
     AdvertnineComponent,
     AdverttenComponent,
-    DialogOverviewComponent
+    DialogOverviewComponent,
+    DialogOverview2Component
   ],
-  entryComponents: [DialogOverviewComponent],
+  entryComponents: [DialogOverviewComponent, DialogOverview2Component],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),

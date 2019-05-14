@@ -18,6 +18,8 @@ export class MainComponent implements OnInit {
   public randomSlowLeftNumber: number;
   public randomFastLeftNumber: number;
   public randomFastRightNumber: number;
+  public SecCounter = 0;
+  public onlyMain = 1;
 
   constructor(
     public authService: AuthService,
@@ -25,6 +27,8 @@ export class MainComponent implements OnInit {
   ) {
     this.generateRandomNumberSlow();
     this.generateRandomNumberFast();
+    this.helpButtonRevealTimer();
+    this.helpButtonHideTimer();
   }
 
   ngOnInit() {
@@ -36,7 +40,7 @@ export class MainComponent implements OnInit {
       this.randomSlowLeftNumber = Math.ceil(this.randomSlowLeftNumber = (Math.random() * (5 - 1) + 1));
       this.randomSlowRightNumber = Math.ceil(this.randomSlowRightNumber = (Math.random() * (5 - 1) + 1));
       this.generateRandomNumberSlow();
-    }, 1700);
+    }, 1300);
   }
 
   generateRandomNumberFast()  {
@@ -45,11 +49,21 @@ export class MainComponent implements OnInit {
       // console.log('FastLeftNumber', this.randomFastRightNumber = Math.ceil(Math.random() * (5 - 1) + 1));
       this.randomFastLeftNumber = Math.ceil(this.randomFastLeftNumber = (Math.random() * (5 - 1) + 1));
       this.randomFastRightNumber = Math.ceil(this.randomFastRightNumber = (Math.random() * (5 - 1) + 1));
-    }, 900);
+    }, 500);
   }
 
 
+  private helpButtonRevealTimer() {
+    setTimeout(()=>{
+      this.SecCounter = 1;
+    }, 20000);
+  }
 
+  private helpButtonHideTimer() {
+    setTimeout(()=>{
+      this.SecCounter = 0;
+    }, 25000);
+  }
 }
 
 
