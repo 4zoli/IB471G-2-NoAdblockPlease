@@ -1,0 +1,21 @@
+<mat-nav-list>
+  <a mat-list-item routerLink="/main">
+    <span mat-line>Ez a link az első szintre fog küldeni, hidd el !</span>
+    <span mat-line>Bízok a szerencsémben! Kattintok!</span>
+  </a>
+
+  <a mat-list-item (click)="openDialog()">
+    <span  mat-line>Ezzel a linkkel nyerhetsz!</span>
+    <span  mat-line>Akkor kattintok, mert nyerni szeretnék!</span>
+  </a>
+
+  <a  (click)="authService.SignOut()" mat-list-item>
+    <span mat-line>Ez a link kiléptet az oldalról. Tényleg</span>
+    <span mat-line>Nem baj, bevállalom!</span>
+  </a>
+
+  <a  mat-list-item >
+    <span routerLink="/main/first" mat-line>Ha ide kattintasz, az első szintre kerülsz, komolyan!</span>
+    <span mat-line>Kockáztatok!</span>
+  </a>
+</mat-nav-list>

@@ -34,15 +34,16 @@ import { AdverttwoComponent } from './components/pages/adverttwo/adverttwo.compo
 import { AdvertthreeComponent } from './components/pages/advertthree/advertthree.component';
 import { AdvertfourComponent } from './components/pages/advertfour/advertfour.component';
 import { AdvertfiveComponent } from './components/pages/advertfive/advertfive.component';
-import {DialogOverviewComponent, FirstpageComponent} from './components/main/firstpage/firstpage.component';
+import {ToNextLevelDialogComponent, FirstpageComponent} from './components/main/firstpage/firstpage.component';
 import { AdvertsixComponent } from './components/pages/advertsix/advertsix.component';
 import { AdvertsevenComponent } from './components/pages/advertseven/advertseven.component';
 import { AdverteightComponent } from './components/pages/adverteight/adverteight.component';
 import { AdvertnineComponent } from './components/pages/advertnine/advertnine.component';
 import { AdverttenComponent } from './components/pages/advertten/advertten.component';
 import {
-  BottomSheetOverviewExampleSheetComponent,
-  DialogOverview2Component,
+  BottomSheetMenuComponent,
+  WinnerDialogComponent,
+  MilfDialogComponent,
   SecondpageComponent
 } from './components/main/secondpage/secondpage.component';
 
@@ -69,11 +70,12 @@ import {
     AdverteightComponent,
     AdvertnineComponent,
     AdverttenComponent,
-    DialogOverviewComponent,
-    DialogOverview2Component,
-    BottomSheetOverviewExampleSheetComponent
+    ToNextLevelDialogComponent,
+    WinnerDialogComponent,
+    BottomSheetMenuComponent,
+    MilfDialogComponent
   ],
-  entryComponents: [DialogOverviewComponent, DialogOverview2Component, BottomSheetOverviewExampleSheetComponent],
+  entryComponents: [ToNextLevelDialogComponent, WinnerDialogComponent, BottomSheetMenuComponent, MilfDialogComponent],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),

@@ -1,7 +1,9 @@
-<div>
-         <button mat-raised-button color="warn" (click)="openDialog()">Tovább</button>
-</div>
-
-<button mat-raised-button (click)="openBottomSheet()">Open file</button>
-
-
+<mat-grid-list cols="5" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let i of indexForButtons" (click)="linkOpener.openURLrosszlanyok()"><button mat-raised-button>Nyert</button></mat-grid-tile>
+  <mat-grid-tile *ngFor="let i of indexForButtons" (click)="linkOpener.openURLporognek()"><button mat-raised-button>Nyert</button></mat-grid-tile>
+  <mat-grid-tile *ngFor="let i of indexForButtons" (click)="linkOpener.openURLgot()"><button mat-raised-button>Nyert</button></mat-grid-tile>
+  <mat-grid-tile (click)="openBottomSheet()"><button mat-raised-button>Nyert!</button></mat-grid-tile>
+  <mat-grid-tile *ngFor="let i of indexForButtons" (click)="linkOpener.openURLrandi()"><button mat-raised-button>Nyert</button></mat-grid-tile>
+  <mat-grid-tile *ngFor="let i of indexForButtons" (click)="linkOpener.openURLcasino()"><button mat-raised-button>Nyert</button></mat-grid-tile>
+  <mat-grid-tile *ngFor="let i of indexForButtons" (click)="linkOpener.openURLgot()"><button mat-raised-button>Nyert</button></mat-grid-tile>
+</mat-grid-list>

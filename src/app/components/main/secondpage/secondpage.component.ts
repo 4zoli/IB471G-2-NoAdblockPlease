@@ -1,77 +1,80 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {DialogData} from '../firstpage/firstpage.component';
-import {MAT_DIALOG_DATA, MatBottomSheet, MatBottomSheetRef, MatDialog, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatBottomSheet, MatDialog, MatDialogRef} from '@angular/material';
 import {AuthService} from '../../../shared/services/auth.service';
-import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
-
-
+import {LinkopenerService} from '../../../shared/services/linkopener.service';
 
 @Component({
   selector: 'app-secondpage',
   templateUrl: './secondpage.component.html',
   styleUrls: ['./secondpage.component.css']
 })
-export class SecondpageComponent implements OnInit {
+export class SecondpageComponent {
+  public indexForButtons = [1, 2, 3, 4];
   constructor(
+    public authService: AuthService,
+    public linkOpener: LinkopenerService,
     public dialog: MatDialog,
     private bottomSheet: MatBottomSheet
   )  { }
-
-  ngOnInit() {
+  ngOnInit()  {
+    console.log('HELLO BM');
+    setTimeout(() => {
+      this.openMilfDialog();
+    }, 5000);
   }
-
-  openDialog(): void {
-    const dialogRef2 = this.dialog.open(DialogOverview2Component, {
-      width: '250px',
-    });
-  }
-
 
 
   openBottomSheet(): void {
-    this.bottomSheet.open(BottomSheetOverviewExampleSheetComponent);
+    this.bottomSheet.open(BottomSheetMenuComponent);
+  }
+
+  openMilfDialog(): void {
+    this.dialog.open(MilfDialogComponent, {
+      width: 'max-content',
+    });
   }
 }
 
-
-
 @Component({
   selector: 'app-bottom-sheet-overview-example-sheet',
-  templateUrl: 'bottom-sheet-overview-example-sheet.html',
+  templateUrl: 'bottomSheetMenu.html',
 })
-export class BottomSheetOverviewExampleSheetComponent {
+export class BottomSheetMenuComponent {
   constructor(
-    private bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheetComponent>,
-    public dialog2: MatDialog
+    public dialog: MatDialog,
+    public authService: AuthService
               ) {}
-  openLink(event: MouseEvent): void {
-    this.bottomSheetRef.dismiss();
-    event.preventDefault();
-  }
+
   openDialog(): void {
-    const dialogRef2 = this.dialog2.open(DialogOverview2Component, {
+    this.dialog.open(WinnerDialogComponent, {
       width: '250px',
     });
   }
 }
 
-
-
-
-
 @Component({
   selector: 'app-dialog-overview',
-  templateUrl: 'dialog-overview.html',
+  templateUrl: 'winner-dialog.html',
 })
-export class DialogOverview2Component {
-
+export class WinnerDialogComponent {
   constructor(
-    public dialogRef2: MatDialogRef<DialogOverview2Component>,
+    public dialogRef: MatDialogRef<WinnerDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, public auth: AuthService) {}
 
   onNoClick(): void {
-    this.dialogRef2.close();
+    this.dialogRef.close();
     this.auth.SignOut();
   }
 
+}
+
+@Component({
+  selector: 'app-milf-dialog',
+  templateUrl: 'milf-dialog.html',
+})
+export class MilfDialogComponent {
+  constructor(
+    public linkOpener: LinkopenerService
+  ) {}
 }

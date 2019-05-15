@@ -1,16 +1,12 @@
-import {Component, OnInit, NgZone, ViewChild} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { AuthService } from '../../shared/services/auth.service';
-import { Router } from '@angular/router';
-import { RouterModule} from '@angular/router';
-import { AppRoutingModule } from '../../shared/routing/app-routing.module';
-
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
   @ViewChild('sidenav') sidenav;
   @ViewChild('firstpage') firstpage;
   @ViewChild('secondpage') secondpage;
@@ -19,19 +15,14 @@ export class MainComponent implements OnInit {
   public randomFastLeftNumber: number;
   public randomFastRightNumber: number;
   public SecCounter = 0;
-  public onlyMain = 1;
 
   constructor(
-    public authService: AuthService,
-    public router: Router
+    public authService: AuthService
   ) {
     this.generateRandomNumberSlow();
     this.generateRandomNumberFast();
     this.helpButtonRevealTimer();
     this.helpButtonHideTimer();
-  }
-
-  ngOnInit() {
   }
   generateRandomNumberSlow()  {
     setTimeout(() => {
@@ -54,13 +45,13 @@ export class MainComponent implements OnInit {
 
 
   private helpButtonRevealTimer() {
-    setTimeout(()=>{
+    setTimeout(() => {
       this.SecCounter = 1;
     }, 20000);
   }
 
   private helpButtonHideTimer() {
-    setTimeout(()=>{
+    setTimeout(() => {
       this.SecCounter = 0;
     }, 25000);
   }
